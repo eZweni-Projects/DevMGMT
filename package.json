@@ -1,5 +1,5 @@
 {
-  "name": "Template",
+  "name": "DevMGMT",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,8 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build-css": "npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch",
-    "build-manifest": "vite build && cp -r public/manifest.json dist/ && cp -r public/icons dist/"
+    "build-css": "npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
