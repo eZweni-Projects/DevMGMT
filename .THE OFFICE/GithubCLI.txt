@@ -1,0 +1,69 @@
+
+#This txt is simply to help us along, feel free to add any other useful commands you come across
+
+
+MOST COMMON COMMANDS:
+Authenticate with GitHub:
+    gh auth login
+
+List Issues:
+    gh issue list
+
+Create an Issue: 
+    gh issue create
+
+View an Issue: 
+    gh issue view <issue-number> eg: "gh issue view 12"
+
+Close an Issue: 
+    gh issue close <issue-number> eg: "gh issue close 12"
+
+Comment on Issue: 
+    gh issue comment 12 --body "refactor: create function to handle..."
+    
+Create a Pull Request: 
+    gh pr create
+    
+List Pull Requests: 
+    gh pr list
+
+Authenticate with GitHub: gh auth login
+
+View Repository Information: gh repo view <repo-name>
+
+Clone a Repository: gh repo clone <repo-name>
+
+Create a New Repository: gh repo create <repo-name>
+
+List Issues: gh issue list
+
+Create an Issue: gh issue create
+
+View an Issue: gh issue view <issue-number>
+
+Close an Issue: gh issue close <issue-number>
+
+Create a Pull Request: gh pr create
+
+List Pull Requests: gh pr list
+
+View a Pull Request: gh pr view <pr-number>
+
+Merge a Pull Request: gh pr merge <pr-number>
+
+Checkout a Pull Request: gh pr checkout <pr-number>
+
+Create a Release: gh release create <tag-name>
+
+List Releases: gh release list
+
+Upload an Asset to a Release: gh release upload <tag-name> <file-path>
+
+View Repository Events: gh repo events
+
+Fork a Repository: gh repo fork <repo-name>
+
+Set Upstream for a Fork: gh repo set-default <repo-name>
+
+List Notifications: gh notif list
+

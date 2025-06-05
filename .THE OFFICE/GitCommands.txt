@@ -1,0 +1,81 @@
+Clone a repository
+    git clone <repository-url>
+
+Check repository status
+    git status
+
+View list of branches
+    git branch  (local branches)
+    git branch -r (remote branches)
+    git branch -a (All branches remote and local)
+
+Add changes to staging area
+    git add <file-name>
+    Or stage all changes: git add .
+
+Commit changes
+    git commit -m "Commit message"
+
+View commit history
+    git log
+
+Create a new branch
+    git branch <branch-name>
+
+Switch branches
+    git checkout <branch-name>
+
+Create and switch to a new branch
+    git checkout -b <branch-name>
+
+Merge a branch
+    git merge <branch-name>
+
+Delete a branch
+    git branch -d <branch-name>
+    (Use -D for force deletion)
+
+Pull latest changes from remote
+    git pull origin <branch-name>
+
+Push changes to remote repository
+    git push origin <branch-name>
+
+View remote repositories
+    git remote -v
+
+Add a remote repository
+    git remote add <remote-name> <repository-url>
+
+Fetch changes from remote
+    git fetch
+
+Revert a commit
+    git revert <commit-hash>
+
+Reset changes in working directory
+    git reset --hard
+
+Show changes in a file
+    git diff <file-name>
+
+Stash changes
+    git stash
+
+Apply stashed changes
+    git stash apply
+
+Tag a commit
+    git tag <tag-name>
+
+List tags
+    git tag
+
+View a specific commit
+    git show <commit-hash>
+
+Rebase a branch
+    git rebase <branch-name>
+
+Check differences between branches
+    git diff <branch1>..<branch2>
