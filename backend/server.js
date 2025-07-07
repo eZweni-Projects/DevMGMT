@@ -21,6 +21,13 @@ const db = new sqlite3.Database('tasks.db', (err) => {
 //     id PRIMARY KEY  TEXT,
 //     inprogress TEXT,
 //     completed TEXT
+// )`); 
+
+// Create Projects Table
+// db.run(`CREATE TABLE IF NOT EXISTS status (
+//     project_id INTEGER PRIMARY KEY  AUTOINCREMENT,
+//     inprogress TEXT,
+//     completed TEXT
 // )`);  
 
 
