@@ -5,6 +5,8 @@ Project Notes
 1. Task management for mutliple tasks = Time series, Time tracking and progress
 2. Mention all details
 3. Mention System limitations
+4. Mention system objects
+5. 
 
 
 <!-- WEB APP -->
@@ -17,7 +19,7 @@ Project Notes
 7. 
 
 <!-- TEN MINUTES PRESENTATION -->
-
+1. Grammarly (Check for Work)
 
 
 
