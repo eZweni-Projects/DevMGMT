@@ -22,8 +22,8 @@ export async function main() {
         { role:"system", content: "" },
         { role:"user", content: "10 front end developer tasks as list" }
       ],
-      temperature: 1,
-      top_p: 1,
+      temperature: 1, // Controls randomness and creativitz of response - 1 is Balanced
+      top_p: 1, 
       model: model
     }
   });
