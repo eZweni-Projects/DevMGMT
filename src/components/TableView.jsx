@@ -27,7 +27,7 @@ const TableView = () => {
                 <input type="date" className="col-span-2 border"></input>
                 
                 <div className="element col-span-2 border">
-                    <select className="status ">
+                    <select className="status p-2 ">
                         {priorityOptions.map((opt, index) => (
                             <option key={index} value={opt}>
                             {opt}
@@ -37,7 +37,7 @@ const TableView = () => {
                 </div>
 
                 <div className="element col-span-1 border">
-                    <select className="status ">
+                    <select className="status p-2 ">
                         {statusOptions.map((opt, index) => (
                             <option key={index} value={opt.toLowerCase()}>
                             {opt}
@@ -45,9 +45,6 @@ const TableView = () => {
                         ))}
                     </select>
                 </div>
-
-
-
             </div>
         </div>
     )
