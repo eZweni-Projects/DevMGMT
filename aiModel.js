@@ -20,9 +20,9 @@ export async function main() {
     body: {
       messages: [
         { role:"system", content: "" },
-        { role:"user", content: "10 front end developer tasks as list" }
+        { role:"user", content: "10 tips for New DAYZ player, use sir to address before each new tip" }
       ],
-      temperature: 1, // Controls randomness and creativitz of response - 1 is Balanced
+      temperature: 1, // Controls randomness and creativity of response - 1 is Balanced
       top_p: 1, 
       model: model
     }

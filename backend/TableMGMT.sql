@@ -13,7 +13,7 @@ CREATE TABLE taskList (
 DROP TABLE tasks;
 
 -- TaskList Dummy Data
-INSERT INTO taskList (taskItem, dueDate, priority, status) VALUES
+INSERT INTO tasklist (taskItem, dueDate, priority, status) VALUES
 ('Design homepage layout', '2025-07-20', 'High', 'In Progress'),
 ('Fix login bug', '2025-07-15', 'Urgent', 'Backlog'),
 ('Write unit tests for API', '2025-07-25', 'Medium', 'Backlog'),
@@ -22,4 +22,8 @@ INSERT INTO taskList (taskItem, dueDate, priority, status) VALUES
 
 
 -- VIEW TABLES
-SELECT * FROM taskList;
+SELECT * FROM tasklist;
+
+-- ADD A COLUMN
+ALTER TABLE taskList
+ADD COLUMN createdAt TIMESTAMPTZ DEFAULT NOW();

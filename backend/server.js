@@ -1,41 +1,40 @@
-const express = require('express');
-const sqlite3 = require('sqlite3').verbose();
-const cors = require('cors');
+// app.js
 
+const express = require("express");
+const { neon } = require("@neondatabase/serverless");
+require("dotenv").config({ path: '../.env' });
 const app = express();
-const PORT = 4000;
+const port = 3000;
 
-app.use(cors());
-app.use(express.json());
-
-const db = new sqlite3.Database('tasks.db', (err) => {
-    if (err) console.error(err.message);
-    else console.log('Connected to SQLite3 database')
- });
+// Neon connection
+const sql = neon(process.env.PG_DATABASE_URL);
 
 
-// Table Creation
+// Test route to check connection
+app.get("/version", async (req, res) => {
+  try {
+    const result = await sql`SELECT version()`;
+    res.status(200).send(result[0].version);
+  } catch (err) {
+    console.error("Error getting version:", err);
+    res.status(500).json({ error: "Failed to fetch DB version" });
+  }
+});
+
+// Main route to read data
+app.get("/read-db", async (req, res) => {
+  try {
+    const result = await sql`SELECT * FROM taskList`;
+    console.log(result)
+    res.json(result);
+  } catch (error) {
+    console.error("Error reading from database:", error);
+    res.status(500).json({ error: "Database read failed" });
+  }
+});
 
 
-// Create Projects Table
-
-db.run(`CREATE TABLE IF NOT EXISTS tasks (
-    id INTEGER PRIMARY KEY  AUTOINCREMENT,
-    task Text,
-    dueDate TEXT,
-    priority TEXT
-    status TEXT
-)`);  
-
-
-
-
-
-app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT}`)
-})
-
-
-
-
-
+// Start server
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
