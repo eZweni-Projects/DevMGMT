@@ -5,6 +5,9 @@ const { neon } = require("@neondatabase/serverless");
 require("dotenv").config({ path: '../.env' });
 const app = express();
 const port = 3000;
+const cors = require('cors');
+
+app.use(cors());
 
 // Neon connection
 const sql = neon(process.env.PG_DATABASE_URL);
