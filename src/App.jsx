@@ -3,9 +3,9 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import TableView from './pages/TableView'
-import Kanban from './pages/Kanban'
-import AssistBot from './pages/AssistBot'
+import TableView from './pages/TablePage'
+import Kanban from './pages/KanbanPage'
+import AssistBot from './pages/AssistBotPage'
 
 // import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 // import Home from "./pages/Home"

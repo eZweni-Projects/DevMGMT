@@ -1,18 +1,16 @@
 import Navbar from "../components/Navbar";
-import TableView from "./TableView";
-import Kanban from "./Kanban";
-import AssistBot from "./AssistBot";
+import TableView from "../components/TableView";
+import KanbanView from "../components/KanbanView";
+import AssistBotView from "../components/AssistBotView";
 
 
 const Home = () => {
     return (
-        <div className="home border">
+        <div className="home border space-y-5 px-4">
             <Navbar/>
-            <h1>I AM THE HOME PAGE</h1>
-
-                <TableView/>
-                <Kanban/>
-                <AssistBot/>
+            <TableView/>
+            <KanbanView/>
+            <AssistBotView/>
 
         </div>
     )
