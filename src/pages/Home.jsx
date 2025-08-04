@@ -14,8 +14,6 @@ const Home = () => {
             <div className="addTask grid row-span-1 grid-cols-4 gap-6 p-2 items-center">
                 <div className="add col-span-3"><AddItem/></div>
                 <div className="add col-span-1"><AddDocument/></div>
-                
-                
             </div>
 
             <TableView/>

@@ -29,7 +29,7 @@ useEffect(() => {
 
             <div className="TableViewContent ">
                 {/* TableView Header */}
-                <div className="taskView grid grid-rows-1 grid-cols-12 border-b pl-2 font-bold my-4 text-xl">
+                <div className="taskView grid grid-rows-1 grid-cols-12 border-b pl-2 font-bold my-4 mx-8 text-xl">
                     <p className="col-span-7 border-r pl-2">Task</p>
                     <p className="col-span-2 border-r pl-2">Due Date</p>
                     <p className="col-span-1 border-r pl-2">Priority</p>
@@ -41,7 +41,7 @@ useEffect(() => {
                 {/* TableView Content */}
                 {tasks.map((task) => (
                     <div key={task.id}
-                        className="taskView grid grid-rows-1 grid-cols-12 border border-black pl-2 mb-1">
+                        className="taskView grid grid-rows-1 grid-cols-12 border border-black pl-2 mb-3 mx-8 rounded">
 
                         <div className="task col-span-7 border-r p-1 flex space-x-4">
                             <TaskIcon/>

@@ -35,7 +35,7 @@ useEffect(() => {
                 {/* TableView Content */}
                 {tasks.map((task) => (
                     <div key={task.id}
-                        className="taskView grid grid-rows-1 grid-cols-12 border border-black/40 pl-2 mb-3 rounded-md hover:bg-slate-200">
+                        className="taskView grid grid-rows-1 grid-cols-12 border border-black/40 pl-2 mb-3 rounded-md shadow-sm hover:bg-slate-200">
                         <div className="task col-span-7 border-r p-1 flex space-x-4">
                             <TaskIcon/>
                             <p className="">{task.taskItem}</p>
