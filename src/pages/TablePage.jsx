@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from "../components/Navbar";
+import Options from '../components/Options';
+import AddIcon from '../../public/icons/ic--baseline-library-add';
+import AddItem from '../components/AddItem';
+import TaskIcon from '../../public/icons/streamline-flex-color--3d-coordinate-axis';
 
 const TableView = () => {
 
@@ -21,20 +25,29 @@ useEffect(() => {
         <div className="tableView ">
             <Navbar/>
 
-            <div className="TableViewContent p-2">
+            <AddItem/>
+
+            <div className="TableViewContent ">
                 {/* TableView Header */}
                 <div className="taskView grid grid-rows-1 grid-cols-12 border-b pl-2 font-bold my-4 text-xl">
-                    <p className="col-span-8 border-r pl-2">Task</p>
+                    <p className="col-span-7 border-r pl-2">Task</p>
                     <p className="col-span-2 border-r pl-2">Due Date</p>
                     <p className="col-span-1 border-r pl-2">Priority</p>
                     <p className="col-span-1 border-r pl-2">Status</p>
                 </div>
 
+                
+
                 {/* TableView Content */}
                 {tasks.map((task) => (
                     <div key={task.id}
                         className="taskView grid grid-rows-1 grid-cols-12 border border-black pl-2 mb-1">
-                        <p className="col-span-8 border-r p-1">{task.taskItem}</p>
+
+                        <div className="task col-span-7 border-r p-1 flex space-x-4">
+                            <TaskIcon/>
+                            <p className="">{task.taskItem}</p>
+                        </div>
+
                         <p className="col-span-2 border-r p-1">
                             {new Date(task.dueDate).toLocaleDateString("en-GB", {
                             day: "2-digit",
@@ -45,6 +58,10 @@ useEffect(() => {
                         {/* <p className="col-span-2 border-r p-1">{task.dueDate}</p> */}
                         <p className="col-span-1 border-r p-1">{task.priority}</p>
                         <p className="col-span-1 border-r p-1">{task.status}</p>
+
+                         <div className="options border col-span-1">
+                        <Options/>
+                        </div>
                     </div>
                 ))}
             </div>

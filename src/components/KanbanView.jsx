@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import { useState, useEffect } from "react";
 import axios from 'axios'
+import Options from "./Options";
 
 const KanbanView = () => {
 
@@ -43,6 +44,8 @@ const KanbanView = () => {
                     >
                     <p className="col-span-6 border-r text-sm">{task.taskItem}</p>
                     <p className="col-span-1 text-xs">Priority: {task.priority}</p>
+
+                    <Options/>
                     </div>
                 ))}
                 </div>
