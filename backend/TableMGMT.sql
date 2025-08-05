@@ -1,11 +1,9 @@
 -- Create tables
 
-CREATE TABLE taskList (
+CREATE TABLE completedTasks (
   id SERIAL PRIMARY KEY,
-  taskItem TEXT NOT NULL,
-  dueDate DATE NULL,
-  priority VARCHAR(20) DEFAULT NULL,
-  status VARCHAR(20) DEFAULT 'Backlog'
+  taskitem TEXT NOT NULL,
+  completion DATE NULL,
 );
 
 -- Drop/Delete Tables
@@ -20,6 +18,9 @@ INSERT INTO tasklist (taskItem, dueDate, priority, status) VALUES
 ('Update user documentation', NULL, 'Low', 'Backlog'),
 ('Deploy new version to production', '2025-07-18', 'High', 'Completed');
 
+INSERT INTO tasklist (taskItem, dueDate, priority, status) VALUES
+('Design homepage layout', '2025-07-20', 'High', 'started');
+
 
 -- VIEW TABLES
 SELECT * FROM tasklist;
@@ -27,3 +28,4 @@ SELECT * FROM tasklist;
 -- ADD A COLUMN
 ALTER TABLE taskList
 ADD COLUMN createdAt TIMESTAMPTZ DEFAULT NOW();
+
