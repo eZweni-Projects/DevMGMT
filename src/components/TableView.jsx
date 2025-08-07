@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Options from './Options';
 import TaskIcon from '../../public/icons/streamline-flex-color--3d-coordinate-axis';
 
-const TableView = () => {
+const TableView = ( ) => {
 
 const [ tasks, setTasks ] = useState([]);
 

@@ -36,7 +36,7 @@ const KanbanView = () => {
                 <div className="status border border-x-black border-y-transparent w-1/4 py-3">
                 
                 {tasks
-                .filter((task) => task.status === "Backlog")
+                .filter((task) => task.status === "backlog")
                 .map((task) => (
                     <div
                     key={task.id}
@@ -45,7 +45,6 @@ const KanbanView = () => {
                     <p className="col-span-6 border-r text-sm">{task.taskItem}</p>
                     <p className="col-span-1 text-xs">Priority: {task.priority}</p>
 
-                    <Options/>
                     </div>
                 ))}
                 </div>
@@ -54,7 +53,7 @@ const KanbanView = () => {
                 <div className="status border border-x-black border-y-transparent w-1/4 py-3">
                 
                 {tasks
-                .filter((task) => task.status === "Started")
+                .filter((task) => task.status === "started")
                 .map((task) => (
                     <div
                     key={task.id}
@@ -70,7 +69,7 @@ const KanbanView = () => {
                 <div className="status border border-x-black border-y-transparent w-1/4 py-3">
                 
                 {tasks
-                .filter((task) => task.status === "Testing")
+                .filter((task) => task.status === "testing")
                 .map((task) => (
                     <div
                     key={task.id}
@@ -86,7 +85,7 @@ const KanbanView = () => {
                 <div className="status border border-x-black border-y-transparent w-1/4 py-3">
                 
                 {tasks
-                .filter((task) => task.status === "Completed")
+                .filter((task) => task.status === "completed")
                 .map((task) => (
                     <div
                     key={task.id}

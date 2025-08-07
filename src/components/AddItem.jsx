@@ -9,16 +9,28 @@ const AddItem = () => {
     const [priority, setPriority] = useState('low');
     const [status, setStatus] = useState('backlog');
 
+    const [ tasks, setTasks ] = useState([])
+
     const postTask = async () => {
         try {
         const task = { taskItem, dueDate, priority, status };
         console.log(task)
         const response = await axios.post('http://localhost:3000/add-task', task);
         console.log('Task posted:', response.data);
+        setTasks(prevTasks => [...prevTasks, response.data]);
+
+        // Clear user input field
+        setTaskItem('');
+        setDueDate('');
+        setPriority('low');
+        setStatus('backlog');
+
         } catch (error) {
         console.error('Failed to post task:', error);
         }
     };
+
+
 
     return (
                 <div className="taskView grid grid-rows-1 grid-cols-12 border pl-1 bg-black/80 p-1 space-x-1 rounded-md">

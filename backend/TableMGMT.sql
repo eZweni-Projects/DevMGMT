@@ -24,8 +24,14 @@ INSERT INTO tasklist (taskItem, dueDate, priority, status) VALUES
 
 -- VIEW TABLES
 SELECT * FROM tasklist;
+SELECT * FROM generatedtasks;
 
 -- ADD A COLUMN
-ALTER TABLE taskList
-ADD COLUMN createdAt TIMESTAMPTZ DEFAULT NOW();
+ALTER TABLE generatedtasks
+ADD COLUMN testconnect TEXT NULL;
 
+ALTER TABLE generatedtasks
+ALTER COLUMN status SET DEFAULT 'pending';
+
+DROP TABLE generatedtasks;
+DROP TABLE IF EXISTS generatedtasks;

@@ -58,18 +58,15 @@ const Kanban = () => {
                 <div className="status border border-black  w-1/4 py-3">
                 
                 {tasks
-                .filter((task) => task.status === "Backlog")
+                .filter((task) => task.status === "backlog")
                 .map((task) => (
                     <div
                         key={task.id}
-                        className="taskView grid grid-cols-6 grid-rows-1 border border-black rounded-md mb-1 p-1 mx-2"
+                        className="taskView grid grid-rows-1 border border-black rounded-md mb-1 p-1 mx-2"
                         >
                         <div className="taskItem col-span-5">
-                            <p className="col-span-6 border-r text-sm">{task.taskItem}</p>
+                            <p className="col-span-6 border-r text-sm font-bold">{task.taskItem}</p>
                             <p className="col-span-1 text-xs">Priority: {task.priority}</p>
-                        </div>
-                        <div className="options col-span-1">
-                            <Options/>
                         </div>
                     </div>
                 ))}
@@ -79,13 +76,13 @@ const Kanban = () => {
                 <div className="status border border-black w-1/4 py-3">
                 
                 {tasks
-                .filter((task) => task.status === "Started")
+                .filter((task) => task.status === "started")
                 .map((task) => (
                     <div
                     key={task.id}
                     className="taskView grid grid-rows-1 border border-black rounded-md mb-1 p-1 mx-2"
                     >
-                    <p className="col-span-6 border-r text-sm">{task.taskItem}</p>
+                    <p className="col-span-6 border-r text-sm font-bold">{task.taskItem}</p>
                     <p className="col-span-1 text-xs">Priority: {task.priority}</p>
                     </div>
                 ))}
@@ -95,13 +92,13 @@ const Kanban = () => {
                 <div className="status border border-black w-1/4 py-3">
                 
                 {tasks
-                .filter((task) => task.status === "Testing")
+                .filter((task) => task.status === "testing")
                 .map((task) => (
                     <div
                     key={task.id}
                     className="taskView grid grid-rows-1 border border-black rounded-md mb-1 p-1 mx-2"
                     >
-                    <p className="col-span-6 border-r text-sm">{task.taskItem}</p>
+                    <p className="col-span-6 border-r text-sm font-bold">{task.taskItem}</p>
                     <p className="col-span-1 text-xs">Priority: {task.priority}</p>
                     </div>
                 ))}
@@ -111,13 +108,13 @@ const Kanban = () => {
                 <div className="status border border-black w-1/4 py-3">
                 
                 {tasks
-                .filter((task) => task.status === "Completed")
+                .filter((task) => task.status === "completed")
                 .map((task) => (
                     <div
                     key={task.id}
                     className="taskView grid grid-rows-1 border border-black rounded-md mb-1 p-1 mx-2"
                     >
-                    <p className="col-span-6 border-r text-sm">{task.taskItem}</p>
+                    <p className="col-span-6 border-r text-sm font-bold">{task.taskItem}</p>
                     <p className="col-span-1 text-xs">Priority: {task.priority}</p>
                     </div>
                 ))}
