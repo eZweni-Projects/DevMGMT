@@ -51,7 +51,9 @@ app.get("/ai-db", async (req, res) => {
    const { sort } = req.query;
 
   try {
-    const result = await sql`SELECT * FROM aitasks`;
+    const result = await sql`
+    SELECT * FROM aitasks
+    WHERE status = 'pending'`;
     console.log(result)
     res.json(result);
   } catch (error) {
@@ -206,7 +208,38 @@ app.post('/textExtract', async (req, res) => {
       }
     });
 
+// Join User Tasks with Accepted AI Tasks
+app.get('/allTasks', async (req, res) => {
+    try {
+        const result = await sql`
+            SELECT 
+                id,
+               "taskItem",
+                "dueDate",
+                priority,
+                status,
+                'user' AS source
+            FROM taskList
 
+            UNION ALL
+
+            SELECT 
+                id,
+                "taskItem",
+                "dueDate",
+                priority,
+                status,
+                'ai' AS source
+            FROM aitasks
+            WHERE status != 'pending';
+        `;
+
+        res.json(result);
+    } catch (error) {
+        console.error("Error fetching all tasks:", error);
+        res.status(500).json({ error: "Failed to fetch tasks" });
+    }
+});
 
 
 // Start server
