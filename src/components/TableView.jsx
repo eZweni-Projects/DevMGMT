@@ -8,6 +8,8 @@ const TableView = ( ) => {
 
 const [ tasks, setTasks ] = useState([]);
 
+
+// Fetch tasks from Database
 useEffect(() => {
     axios.get('http://localhost:3000/read-db')
     .then(res => {
@@ -17,6 +19,10 @@ useEffect(() => {
         console.error("Failed to Get Tasks Data", err)
     });
 }, []);
+
+// Edit tasks
+
+
 
 
     return (

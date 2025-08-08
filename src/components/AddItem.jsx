@@ -24,10 +24,11 @@ const AddItem = () => {
         setDueDate('');
         setPriority('low');
         setStatus('backlog');
-
-        } catch (error) {
+        
+    } catch (error) {
         console.error('Failed to post task:', error);
-        }
+    }
+    window.location.reload(); //Temporary quickload for new task
     };
 
 

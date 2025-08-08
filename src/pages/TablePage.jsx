@@ -21,6 +21,17 @@ useEffect(() => {
 }, []);
 
 
+// Delete User entries
+const handleDeleteTask = async (taskId) => {
+    try {
+        await axios.delete(`http://localhost:3000/delete/${taskId}`);
+        setTasks(prevTasks => prevTasks.filter(task => task.id !== taskId))
+    } catch (error) {
+        console.error({ error: "Failed to Delete task (FE)", error})
+    }
+};
+
+
     return (
         <div className="tableView ">
             <Navbar/>
@@ -41,7 +52,7 @@ useEffect(() => {
                 {/* TableView Content */}
                 {tasks.map((task) => (
                     <div key={task.id}
-                        className="taskView grid grid-rows-1 grid-cols-12 border border-black pl-2 mb-3 mx-8 rounded">
+                        className="taskView grid grid-rows-1 grid-cols-12 border border-black hover:bg-slate-200 pl-2 mb-3 mx-8 rounded">
 
                         <div className="task col-span-7 border-r p-1 flex space-x-4">
                             <TaskIcon/>
@@ -60,7 +71,7 @@ useEffect(() => {
                         <p className="col-span-1 border-r p-1">{task.status}</p>
 
                          <div className="options border col-span-1">
-                        <Options/>
+                        <Options taskId={task.id} onDelete={handleDeleteTask}/>
                         </div>
                     </div>
                 ))}

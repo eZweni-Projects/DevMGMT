@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import AddDocument from './AddDocument';
 
 const Navbar = () => {
 
@@ -13,6 +14,10 @@ const Navbar = () => {
                 <p className="cursor-pointer font-semibold hover:text-gray-500" onClick={() => navigate("/tableView")}>TableView</p>
                 <p className="cursor-pointer font-semibold hover:text-gray-500" onClick={() => navigate("/kanban")}>Kanban</p>
                 <p className="cursor-pointer font-semibold hover:text-gray-500" onClick={() => navigate("/assistBot")}>Assist-Bot</p>
+            </div>
+
+            <div className="upload">
+                <AddDocument/>
             </div>
         </div>
     )

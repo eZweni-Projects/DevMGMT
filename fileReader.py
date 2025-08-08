@@ -18,7 +18,7 @@ import PyPDF2
 import requests
 import json
 
-file_path = r'C:\Users\dumez\Downloads\PORTFOLIO\DevMGMT\Mock Conversation.pdf'
+file_path = r'C:\Users\dumez\Downloads\PORTFOLIO\DevMGMT\Conversation.pdf'
 
 def read_pdf(file_path):
     with open(file_path, 'rb') as f:
