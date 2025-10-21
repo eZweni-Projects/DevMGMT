@@ -6,8 +6,6 @@ Project Notes
 2. Mention all details
 3. Mention System limitations
 4. Mention system objects
-5. 
-
 
 <!-- WEB APP -->
 1. FrontEnd - React Js
@@ -15,14 +13,7 @@ Project Notes
 3. Design - Penpot
 4. Webhooks- For intergration
 5. Component Diagram, Sequence Diagram, Usecase Diagrams
-6. 
-7. 
-
-<!-- TEN MINUTES PRESENTATION -->
-1. Grammarly (Check for Work)
-
-
-
+   
 <!-- SIMILAR TOOLS -->
 1. Github Projects
 2. Monday
